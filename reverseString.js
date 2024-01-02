@@ -4,25 +4,27 @@
 
 // First Method
 
-class Solution {
+// class Solution {
     
-    reverseWord(str){
-      let string = str.split("").reverse().join("");
-       return string;
-    }
-}
+//     reverseWord(str){
+//       let string = str.split("").reverse().join("");
+//        return string;
+//     }
+// }
 
 //Second Method
-class Solution {
+// class Solution {
+
+
     
-    reverseWord(str){
-        let string =""
-      for(let i = str.length-1; i>=0; i--){
-         string+=str[i];  
-      } 
-      return string
- }
- }
+//     reverseWord(str){
+//         let string =""
+//       for(let i = str.length-1; i>=0; i--){
+//          string+=str[i];  
+//       } 
+//       return string
+//  }
+//  }
 
  // Third Method
 
@@ -30,6 +32,7 @@ class Solution {
     if (str === "")
       return "";
     else
+      console.log(str.charAt(0))
       return reverseString(str.substr(1)) + str.charAt(0);
   }
-  reverseString("hello");
+  console.log(reverseString("hello"));
