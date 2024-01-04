@@ -3,9 +3,9 @@
 // arr[] = {1, -1, 3, 2, -7, -5, 11, 6 }
 // Output : 
 // 1  3  2  11  6  -1  -7  -5
-segregateElements([1, -1, 3, 2, -7, -5, 11, 6], 8)
+segregateElements([1, -1, 4,7, -6,-9, 3, 2, -7, -5, 11, 6])
 
- function segregateElements(arr,n){
+ function segregateElements(arr){
     //code here
     let pos =[];
     let neg=[]
