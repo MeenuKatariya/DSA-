@@ -12,7 +12,7 @@ function subArray(arr, sum){
             return;
         }
         else {
-            // Try all subarrays starting with 'i'
+           
             for (let j = i + 1; j < arr.length; j++) {
                 currentSum += arr[j];
  
