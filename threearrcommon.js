@@ -1,26 +1,41 @@
-function Three(arr1, arr2, arr3){
-    let bag =[]
-   for(let i=0;i<arr1.length;i++){
-    for(let j=0;j<=arr2.length;j++){
-       if(arr1[i] == arr2[j]){
-          bag.push(arr1[i])
-       }
+function findIntersection(arr1, arr2, arr3){
+    let i = 0;
+    let j = 0;
+    const temp = [];
+ 
+    while (i < arr1.length && j < arr2.length) {
+        if (arr1[i] < arr2[j]) {
+            i++;
+        } else if (arr2[j] < arr1[i]) {
+            j++;
+        } else {
+            temp.push(arr1[i]);
+            i++;
+            j++;
+        }
     }
-   }
-  
-   let result = ""
-   for(let j=0;j<arr3.length;j++){
-   for(let i=0;i<bag.length;i++){
-     if(arr3[j] == bag[i]){
-          result+=arr3[j] + ' '
-     } 
-   }
-   
-   }
-   console.log(result)
+ 
+    console.log(temp)
 }
+function main() {
+    const arr1 = [3,3,3];
+    const arr2 = [3,3,3];
+    const arr3 = [3,3,3];
+ 
+    // Find the intersection of arr1 and arr2
+    const temp = findIntersection(arr1, arr2);
+ 
+    // Find the intersection of temp and arr3 to get common elements
+    const ans = findIntersection(temp, arr3);
+ 
+    console.log("Common elements present in arrays are:");
+    for (const element of ans) {
+        console.log(element);
+    }
+}
+main()
 
-let arr1 = [1, 5, 10, 20, 40, 80]
-let arr2 = [6, 7, 20, 80, 100]
-let arr3 = [4, 15, 20, 30, 70, 80, 120]
-Three(arr1, arr2, arr3)
+// let arr1 = [3 ,4,5,2,3,3]
+// let arr2 = [1, 3,4,3,5, 3]
+// let arr3 = [3, 3,,1,3,5,4, 3]
+// Three(arr1, arr2, arr3)
